@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1d2b53;
+  font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  color: #fff;
+  touch-action: none;
+  user-select: none;
+}
+
+#game {
+  position: relative;
+  width: min(480px, 100vw);
+  aspect-ratio: 480 / 640;
+  max-height: 100vh;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(#8fd3ff, #d9f5ff 70%, #b6e388 70%);
+}
+
+#hud {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #234;
+  text-shadow: 0 1px 0 rgba(255,255,255,.7);
+  pointer-events: none;
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 30, 60, .85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 20px;
+}
+
+#overlay h1 { font-size: 28px; }
+#overlay p { line-height: 1.6; }
+#overlay .small { font-size: 13px; opacity: .85; }
+#overlay.hidden { display: none; }
+
+#points { border-collapse: collapse; }
+#points td { padding: 3px 12px; font-size: 18px; }
+#points td:last-child { text-align: right; color: #ffd84d; font-weight: bold; }
+
+button {
+  font-size: 20px;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 30px;
+  background: #ff9f1c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #c46f00;
+}
+button:active { transform: translateY(3px); box-shadow: 0 1px 0 #c46f00; }

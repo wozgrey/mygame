@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>どうぶつキャッチ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <div id="hud">
+      <div>スコア: <span id="score">0</span></div>
+      <div>ハイスコア: <span id="best">0</span></div>
+      <div id="lives">❤️❤️❤️</div>
+    </div>
+    <canvas id="canvas" width="480" height="640"></canvas>
+
+    <div id="overlay">
+      <h1>🐾 どうぶつキャッチ 🐾</h1>
+      <p>空から降ってくる動物をカゴでキャッチしよう!<br>小さい動物ほど高得点!</p>
+      <table id="points"></table>
+      <p class="small">操作: マウス / タッチでドラッグ、または ← → キー<br>落とすとライフが減ります</p>
+      <button id="startBtn">スタート</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
